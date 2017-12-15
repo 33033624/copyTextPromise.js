@@ -1,0 +1,1 @@
+# copyTextPromise.js
