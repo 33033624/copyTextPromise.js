@@ -1,31 +1,19 @@
 # copyTextPromise.js
- Status](https://travis-ci.org/sindresorhus/copy-text-to-clipboard.svg?branch=master)](https://travis-ci.org/sindresorhus/copy-text-to-clipboard)
-
-> Copy text to the clipboard in modern browsers *(0.2 kB)*
-
-[Try it out!](https://jsfiddle.net/sindresorhus/6406v3pf/)
-
-
-## Comparison
-
-- This module: **0.2 kB**
-- [`clipboard.js`](https://github.com/zenorocha/clipboard.js): 3.4 kB
-
-
-## Install
-
-```
-$ npm install copy-text-to-clipboard
-```
 
 
 ## Usage
 
 ```js
-const copy = require('copy-text-to-clipboard');
+const copyTextPromise = require('copyTextPromise.js');
 
 button.addEventListener('click', () => {
-	copy('🦄🌈');
+	copyTextPromise('text').then(success => {
+          success 
+	  ?
+	  console.log('text copy success and you can paste the text') 
+	  :
+	  console.log('broswer is no support copy, you can use another method to tip')
+	});
 });
 ```
 
@@ -45,7 +33,3 @@ Must be called in response to a user gesture event, like `click` or `keyup`.
 
 - [clipboardy](https://github.com/sindresorhus/clipboardy) - Access the system clipboard (copy/paste) in Node.js
 
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
